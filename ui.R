@@ -75,7 +75,7 @@ shinyUI(
         
         #Go button
         p("This app was created by Simon S. Viloria on april of 2019."),
-        p("Code is available on: github.com/simonsv/whatcloud")
+        p("Code is available on: github.com/simonsv/whatcloudApp")
       ),
       
       sidebarPanel(
