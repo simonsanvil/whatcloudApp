@@ -4,6 +4,8 @@ if (!require(wordcloud)){
   install.packages('wordcloud')}
 library(wordcloud)
 
+Sys.setlocale('LC_ALL','C')
+
 shinyServer(function(input, output, session) {
   # Define a reactive expression for the document term matrix
 

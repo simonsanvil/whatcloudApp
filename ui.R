@@ -30,13 +30,15 @@ shinyUI(
         
         div("Instructions on how to download your whatsapp chats as a *.TXT file can be found at the bottom of this page. None of the data you upload to this website will be collected. Everything is done on the client-side.", style = "color:grey"),
         
-        #p(),
-        
         # Horizontal line ----
         tags$hr(),
         
+        
         radioButtons("other", "Is the file a chat?",
                      c("Yes", "No"), inline = T),
+        
+        # Horizontal line ----
+        tags$hr(),
         
         # Input: Checkbox if file has header ----
         sliderInput('min.freq','Minimum Frequency:',
@@ -74,7 +76,7 @@ shinyUI(
         tags$hr(),
         #Go button
         p("This app was created by Simon S. Viloria on april of 2019."),
-        p("Code is available on: github.com/simonsv/whatcloudApp")
+        p("Code is available on: github.com/simonsanvil/whatcloudApp")
       ),
       
       sidebarPanel(

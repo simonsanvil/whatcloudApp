@@ -22,14 +22,17 @@ if (!require(stringr)){
   install.packages('stringr')}
 require(stringr)
 
+Sys.setlocale('LC_ALL','C')
+
 # Using "memoise" to automatically cache the results
 getChat <- function(f,type) {
   # Careful not to let just any name slip in here; a
   # malicious user could manipulate this value.
   
+  cat("\n", file = f$datapath, append = TRUE)
   if(type == T){
-      tryCatch(text <- readLines(f$datapath,encoding = "UTF-8"), finally = text <- readLines(f$datapath,encoding = "UTF=8"))
-      }else{text <- readLines(f$datapath,encoding = "UTF=8")}
+      tryCatch(text <- readLines(f$datapath,encoding = "UTF-8"), finally = text <- readLines(f$datapath,encoding = "ISC"))
+      }else{try(text <- readLines(f$datapath,encoding = "UTF=8"))}
   text <- replace_non_ascii(text)
   text <- add_comma_space(text)
   text <- replace_email(text, replacement = '')
