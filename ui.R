@@ -75,7 +75,7 @@ shinyUI(
         # Horizontal line ----
         tags$hr(),
         #Go button
-        p("This app was created by Simon S. Viloria on april of 2019."),
+        p("This app was created on april of 2019."),
         p("Code is available on: github.com/simonsanvil/whatcloudApp")
       ),
 

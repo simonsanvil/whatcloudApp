@@ -4,8 +4,6 @@ if (!require(wordcloud)){
   install.packages('wordcloud')}
 library(wordcloud)
 
-Sys.setlocale('LC_ALL','C')
-
 shinyServer(function(input, output, session) {
   # Define a reactive expression for the document term matrix
 
@@ -29,7 +27,7 @@ shinyServer(function(input, output, session) {
       })
     })
   })
-
+  
   col <- reactive({
       #input$goButton
       input$background.color
@@ -63,3 +61,6 @@ shinyServer(function(input, output, session) {
   },res = 90, bg = col) # #bg.col
   })
 })
+
+
+
